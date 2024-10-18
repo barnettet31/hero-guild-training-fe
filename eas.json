@@ -16,6 +16,12 @@
     }
   },
   "submit": {
+    "development": {
+      "android": {
+        "track": "internal"
+      },
+      "ios": {}
+    },
     "production": {}
   }
 }
