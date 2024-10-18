@@ -1,9 +1,10 @@
 on:
   pull_request:
     branches: [main]
+    types: [labeled]
 jobs:
   update:
-    if: ${{ github.event.label.name === 'eas-update' }}
+    if: ${{ contains(join(github.event.pull_request.labels.*.name, ','), 'eas-update') }}
     runs-on: ubuntu-latest
     steps:
       - name: 🏗 Setup repo
@@ -26,3 +27,6 @@ jobs:
 
       - name: 🚀 Create update
         run: eas update --auto --non-interactive
+  alt-label:
+    if: ${{ !contains(join(github.event.pull_request.labels.*.name, ','), 'eas-update')}}
+    run: echo "Didn't run because no label match."
