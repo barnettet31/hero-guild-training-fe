@@ -1,13 +1,14 @@
 import React from "react";
-import XPBar from "../xpBar";
-import { QuestsButton } from "../questButton";
+import XPBar from "./xpBar";
+import { QuestsButton } from "./questButton";
 import { View } from "react-native";
 
-export function ExperienceController() {
+export function GameHeaderLeft() {
   const userExperience = 95 / 100;
   return (
-    <View className="align-start w-full">
+    <View className="align-start w-1/2">
       <XPBar progress={userExperience} />
+
       <QuestsButton />
     </View>
   );
