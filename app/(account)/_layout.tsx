@@ -1,12 +1,8 @@
-import { Slot } from "expo-router";
-import React from "react";
-import { SafeAreaView } from "react-native";
+import { Slot, Stack } from "expo-router";
+import { SafeAreaView, StatusBar } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { StatusBar } from "expo-status-bar";
-export const unstable_settings = {
-  initialRouteName: "/(game)/",
-};
-export default function RootLayout() {
+
+export default function AccountLayout() {
   const insets = useSafeAreaInsets();
   return (
     <SafeAreaView
@@ -14,6 +10,7 @@ export default function RootLayout() {
       style={{ paddingTop: insets.top, flex: 1 }}
     >
       <Slot />
+
       <StatusBar hidden />
     </SafeAreaView>
   );
