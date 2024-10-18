@@ -4,8 +4,8 @@
     "appVersionSource": "remote"
   },
   "build": {
-    "autoIncrement": true,
     "development": {
+      "autoIncrement": true,
       "android": {
         "image": "latest"
       },
@@ -15,6 +15,7 @@
       "channel": "development"
     },
     "preview": {
+      "autoIncrement": true,
       "android": {
         "image": "latest"
       },
@@ -37,7 +38,8 @@
   "submit": {
     "development": {
       "android": {
-        "track": "internal"
+        "track": "internal",
+        "releaseStatus": "draft"
       },
       "ios": {
         "ascAppId": "6737132267"
