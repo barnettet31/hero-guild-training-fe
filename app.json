@@ -39,6 +39,12 @@
         "projectId": "7ec48905-b677-4621-a339-f22d8c11acb5"
       }
     },
-    "owner": "barnette31"
+    "owner": "barnette31",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/7ec48905-b677-4621-a339-f22d8c11acb5"
+    }
   }
 }
