@@ -1,9 +1,7 @@
 name: Test Solutions
 on:
-  push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -17,4 +15,3 @@ jobs:
           node-version: "22"
       - run: npm install
       - run: npm run test
-      
