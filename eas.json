@@ -5,22 +5,24 @@
   },
   "build": {
     "development": {
-      "distribution": "internal",
+      "autoIncrement": true,
       "android": {
         "image": "latest"
       },
       "ios": {
         "image": "latest"
-      }
+      },
+      "channel": "development"
     },
     "preview": {
-      "distribution": "internal",
+      "autoIncrement": true,
       "android": {
         "image": "latest"
       },
       "ios": {
         "image": "latest"
-      }
+      },
+      "channel": "preview"
     },
     "production": {
       "autoIncrement": true,
@@ -29,15 +31,19 @@
       },
       "ios": {
         "image": "latest"
-      }
+      },
+      "channel": "production"
     }
   },
   "submit": {
     "development": {
       "android": {
-        "track": "internal"
+        "track": "internal",
+        "releaseStatus": "draft"
       },
-      "ios": {}
+      "ios": {
+        "ascAppId": "6737132267"
+      }
     },
     "production": {}
   }
